@@ -4,7 +4,7 @@
 
 ---
 
-## 🚀 Overview
+## Overview
 
 This project demonstrates how to build a production-grade chatbot that answers questions using a controlled set of documents—**not just generic internet knowledge**.
 
@@ -16,13 +16,13 @@ This project demonstrates how to build a production-grade chatbot that answers q
 
 ---
 
-## 🌐 Live Demo
+## Live Demo
 
 Try it here: [https://magenta-ganache-de2bab.netlify.app/](https://magenta-ganache-de2bab.netlify.app/)
 
 ---
 
-## 🧠 How It Works (High Level)
+## How It Works (High Level)
 
 1. **Ingestion:**
    A fixed set of documents (from a Hugging Face dataset) was uploaded to Azure Blob Storage.
@@ -46,7 +46,7 @@ Try it here: [https://magenta-ganache-de2bab.netlify.app/](https://magenta-ganac
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 * **Azure OpenAI (GPT-4, Embeddings)**
 * **Azure Cognitive Search**
@@ -57,7 +57,7 @@ Try it here: [https://magenta-ganache-de2bab.netlify.app/](https://magenta-ganac
 
 ---
 
-## ⚡ Example Usage
+## Example Usage
 
 > **User:** “What is the company policy on remote work?”
 > **Chatbot:**
@@ -66,23 +66,9 @@ Try it here: [https://magenta-ganache-de2bab.netlify.app/](https://magenta-ganac
 
 ---
 
-## 🔐 **Security Note**
+## **Security Note**
 
 * All keys/secrets must be provided in a **local `.env` file** (never committed!).
 * For production, use **Azure Key Vault** and managed identities.
-
----
-
-## ❓ FAQ
-
-**Q: Can users upload their own documents?**
-A: **No.** Currently, the system is designed for research and demo purposes only. Only documents included in the demo dataset (uploaded in advance) are available for question answering.
-
-**Q: Can I run this without Azure/OpenAI keys?**
-A: The code is designed for Azure, but can be adapted for open-source LLMs and local vector DBs. Sample data pipelines are included for illustration, but end-to-end Q\&A requires cloud credentials.
-
-**Q: What’s unique here?**
-A: True “retrieval-augmented” LLM: the chatbot answers ONLY with facts found in your controlled document collection. No more “hallucinated” responses.
-Modular—swap out the embedding model or retriever as needed.
 
 ---
